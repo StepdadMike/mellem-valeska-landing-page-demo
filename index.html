@@ -144,6 +144,9 @@ h1 {
 .signup .row .btn { min-height: 0; padding: 0 1.25rem; flex: none; }
 .note { font-size: 0.875rem; color: var(--muted); margin: 0; max-width: 28rem; }
 .note button { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
+.consent { display: flex; gap: 0.625rem; align-items: flex-start; font-size: 0.875rem; color: var(--muted); max-width: 28rem; cursor: pointer; }
+.consent input { width: 1.125rem; height: 1.125rem; margin: 0.15rem 0 0; flex: none; accent-color: var(--blue); }
+.consent button { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 .status { min-height: 1.4em; font-size: 0.9375rem; margin: 0; font-weight: 700; }
 .status.err { color: #B3261E; }
 
@@ -221,7 +224,8 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
             <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required data-i18n-ph="emailPh" placeholder="Your email">
             <button class="btn" type="submit" data-i18n="submit">Keep me posted</button>
           </div>
-          <p class="note"><span data-i18n="note">We’ll send one email to confirm, then occasional news about mellem. Unsubscribe any time.</span> <button type="button" data-open="privacy" data-i18n="privacyLink">Privacy</button></p>
+          <label class="consent"><input type="checkbox" id="consent" name="consent" required><span><span data-i18n="consent">I agree to receive the mellem newsletter and accept the</span> <button type="button" data-open="privacy" data-i18n="privacyNotice">privacy notice</button>.</span></label>
+          <p class="note" data-i18n="note">We’ll send one email to confirm, then once a month. Unsubscribe any time.</p>
           <p class="status" id="status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -306,7 +310,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
       <h3>Keine Cookies, kein Tracking</h3>
       <p>Wir setzen keine Cookies, keine Analyse- und keine Marketing-Tools ein und laden keine Schriften von externen Servern. Deine Sprachwahl wird nur lokal in deinem Browser gespeichert und nicht an uns übertragen.</p>
       <h3>Updates per E-Mail (Brevo)</h3>
-      <p>Wenn du dich für Updates einträgst, verarbeiten wir deine E-Mail-Adresse und die gewählte Sprache, um dir Neuigkeiten zu mellem zu schicken. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du erhältst zuerst eine Bestätigungs-E-Mail (Double-Opt-in); erst nach deinem Klick auf den Bestätigungslink nehmen wir dich in den Verteiler auf. Für Verwaltung und Versand nutzen wir Brevo (Brevo SAS, 7 rue de Madrid, 75008 Paris, Frankreich). Die Daten werden auf Servern in der EU verarbeitet, mit Brevo besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Weitere Informationen: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
+      <p>Wenn du dich für den Newsletter einträgst, verarbeiten wir deine E-Mail-Adresse und die gewählte Sprache, um dir unseren monatlichen Newsletter zu schicken (Death Tech, die Zukunft des Lebensendes und die Menschen, die daran arbeiten). Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Du erhältst zuerst eine Bestätigungs-E-Mail (Double-Opt-in); erst nach deinem Klick auf den Bestätigungslink nehmen wir dich in den Verteiler auf. Für Verwaltung und Versand nutzen wir Brevo (Brevo SAS, 7 rue de Madrid, 75008 Paris, Frankreich). Die Daten werden auf Servern in der EU verarbeitet, mit Brevo besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Weitere Informationen: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
       <p>Du kannst deine Einwilligung jederzeit widerrufen, über den Abmeldelink in jeder E-Mail oder per E-Mail an info@mellem.io. Abgemeldete Adressen können wir bis zu drei Jahre zum Nachweis der früheren Einwilligung gesperrt speichern.</p>
       <h3>LinkedIn</h3>
       <p>Der Link zu unserem LinkedIn-Profil ist ein einfacher Link. Erst wenn du ihn anklickst, werden Daten an LinkedIn (LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Irland) übertragen. Dafür gilt die Datenschutzerklärung von LinkedIn.</p>
@@ -323,7 +327,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
       <h3>No cookies, no tracking</h3>
       <p>We use no cookies, no analytics or marketing tools, and we do not load fonts from external servers. Your language choice is stored only locally in your browser and is not sent to us.</p>
       <h3>Email updates (Brevo)</h3>
-      <p>If you sign up for updates, we process your email address and chosen language to send you news about mellem. The legal basis is your consent (Art. 6(1)(a) GDPR). You first receive a confirmation email (double opt-in); we only add you to the list after you click the confirmation link. We use Brevo (Brevo SAS, 7 rue de Madrid, 75008 Paris, France) to manage and send emails. Data is processed on servers in the EU, and we have a data processing agreement with Brevo under Art. 28 GDPR. More information: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
+      <p>If you sign up for the newsletter, we process your email address and chosen language to send you our monthly newsletter (death tech, the future of end-of-life and the people building it). The legal basis is your consent (Art. 6(1)(a) GDPR). You first receive a confirmation email (double opt-in); we only add you to the list after you click the confirmation link. We use Brevo (Brevo SAS, 7 rue de Madrid, 75008 Paris, France) to manage and send emails. Data is processed on servers in the EU, and we have a data processing agreement with Brevo under Art. 28 GDPR. More information: <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener">brevo.com/legal/privacypolicy</a>.</p>
       <p>You can withdraw your consent at any time, using the unsubscribe link in every email or by writing to info@mellem.io. After you unsubscribe, we may keep your address on a blocklist for up to three years to prove that consent was given.</p>
       <h3>LinkedIn</h3>
       <p>The link to our LinkedIn profile is a plain link. Data is only transferred to LinkedIn (LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Ireland) once you click it. LinkedIn’s privacy policy applies from then on.</p>
@@ -339,8 +343,8 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid 
 /* ---------- things to check before going live ---------- */
 const CONFIG = {
   linkedin: "https://www.linkedin.com/company/mellem-io/",
-  // Brevo form (double opt-in). Visitors sign up through this form.
-  signupEndpoint: "https://66071c94.sibforms.com/serve/MUIFACudx1yWWqBZ6f1vFaQ3QCRjab8S5443gUI2uj4Q-9wPfLfFmI9Qq3alV3ZzmWRvWPBgHqbc-bH9HINikaBJf_RT8HSrV_5WlRjwrQv_Z1Gz7wPBHhPXQSFuLKAF6Zxs1naqb_sAwLlSFsLMVgAjisnbt94JFdOpLIzCUg9BDQUP48NNV62rWus3sf905kZ4Yhd5fldy6hSQbg==",
+  // Brevo form "Slush_Website_SignUp" (double opt-in).
+  signupEndpoint: "https://66071c94.sibforms.com/serve/MUIFALFh2zZO01i_y_w1V6uRdqrd4QWNJCOIvCF5GkjQJkizs7YJdDZKGTyTK8JrsStb66_f0t9NJgKuICRXzOu728AAZzRlsZan8sZC7WLx1r-Ad95VMmuRHxplRgN3zzTAZar9ttvOFQLnHCydu5xNvd4K6EPxDxJjpSFAHt6QNLjq8B-Zwt8z5JdNrdysWUjFrikdP46w81rDwg==",
   fallbackEmail: "service@mellem.io"
 };
 
@@ -355,7 +359,10 @@ const T = {
     emailLabel: "Your email address",
     emailPh: "Your email",
     submit: "Keep me posted",
-    note: "We’ll send one email to confirm, then occasional news about mellem. Unsubscribe any time.",
+    note: "We’ll send one email to confirm, then once a month. Unsubscribe any time.",
+    consent: "I agree to receive the mellem newsletter and accept the",
+    privacyNotice: "privacy notice",
+    needConsent: "Please tick the box to agree.",
     privacyLink: "Privacy",
     privacyFoot: "Privacy",
     okMail: "Almost there. Your email app should open, just hit send.",
@@ -373,7 +380,10 @@ const T = {
     emailLabel: "Deine E-Mail-Adresse",
     emailPh: "Deine E-Mail",
     submit: "Updates erhalten",
-    note: "Du bekommst eine Mail zur Bestätigung, danach gelegentlich Neuigkeiten zu mellem. Abmelden geht jederzeit.",
+    note: "Du bekommst eine Mail zur Bestätigung, danach einmal im Monat Post von uns. Abmelden geht jederzeit.",
+    consent: "Ich möchte den mellem-Newsletter erhalten und akzeptiere die",
+    privacyNotice: "Datenschutzhinweise",
+    needConsent: "Bitte setz den Haken, um zuzustimmen.",
     privacyLink: "Datenschutz",
     privacyFoot: "Datenschutz",
     okMail: "Fast geschafft. Dein Mailprogramm sollte sich öffnen, einfach abschicken.",
@@ -416,6 +426,13 @@ $$("dialog").forEach(d => {
   $("[data-close]", d).addEventListener("click", () => d.close());
 });
 
+/* debug view: open the page with ?debug to see Brevo's real reply in a panel at the bottom */
+if (/[?&]debug\b/.test(location.search)) {
+  const fr = document.querySelector('iframe[name="brevo-target"]');
+  fr.style.cssText = "display:block;position:fixed;left:0;right:0;bottom:0;width:100%;height:45vh;border:0;border-top:3px solid #6577FE;background:#fff;z-index:50";
+  fr.removeAttribute("aria-hidden"); fr.removeAttribute("tabindex"); fr.title = "Brevo response (debug)";
+}
+
 /* email signup: posts to the Brevo form (double opt-in) via a hidden iframe */
 function sendToBrevo(email) {
   const f = document.createElement("form");
@@ -423,7 +440,7 @@ function sendToBrevo(email) {
   f.action = CONFIG.signupEndpoint;
   f.target = "brevo-target";
   f.style.display = "none";
-  [["EMAIL", email], ["email_address_check", ""], ["locale", lang], ["html_type", "simple"]].forEach(([n, v]) => {
+  [["EMAIL", email], ["OPT_IN", "1"], ["email_address_check", ""], ["locale", lang], ["html_type", "simple"]].forEach(([n, v]) => {
     const i = document.createElement("input");
     i.type = "hidden"; i.name = n; i.value = v;
     f.appendChild(i);
@@ -443,10 +460,16 @@ $("#signup").addEventListener("submit", e => {
     status.className = "status err";
     return;
   }
+  if (!$("#consent").checked) {
+    status.textContent = T[lang].needConsent;
+    status.className = "status err";
+    return;
+  }
   if (CONFIG.signupEndpoint) {
     sendToBrevo(email);
     status.textContent = T[lang].okForm;
     $("#email").value = "";
+    $("#consent").checked = false;
   } else {
     const subject = encodeURIComponent("Keep me posted – mellem");
     const text = encodeURIComponent("Please add me to the mellem updates list:\n" + email);
